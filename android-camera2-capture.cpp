@@ -553,6 +553,7 @@ static void android_camera2_capture_on_image_available(void *context, AImageRead
 							
 							env->DeleteLocalRef(imageByteArray);
     						env->DeleteLocalRef(processedByteArray);
+							free(buffer);
 							
 							// ms_error("[Camera2 Capture] Allocate buffer for the result");
 							// std::vector<uint8_t> resultData(resultLength);
